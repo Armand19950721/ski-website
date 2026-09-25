@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ken",
+    "title": "Ski 主教練",
+    "certs": ["CASI Level 2", "SAJ 1 級"],
+    "bio": "滑雪 15 年，二世谷教學 8 季，擅長初學者引導與親子教學。",
+    "image": "/images/instructor-ken.jpg"
+  },
+  {
+    "name": "Mia",
+    "title": "Snowboard 教練",
+    "certs": ["CASI Level 2"],
+    "bio": "單板 10 年，專攻初學者站姿與轉彎，教學耐心細膩。",
+    "image": "/images/instructor-mia.jpg"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "初學者滑雪課（Ski）",
+    "level": "初學",
+    "duration": "3 小時",
+    "price": 6000,
+    "currency": "TWD",
+    "description": "從穿雪鞋、上板、煞車到基本轉彎，一天內學會安全下綠線。",
+    "includes": ["中文教練", "雪票協助", "課後影片回饋"]
+  },
+  {
+    "name": "初學者單板課（Snowboard）",
+    "level": "初學",
+    "duration": "3 小時",
+    "price": 6000,
+    "currency": "TWD",
+    "description": "建立正確站姿與重心，學會落葉飄與基本 S 轉。",
+    "includes": ["中文教練", "雪票協助", "課後影片回饋"]
+  },
+  {
+    "name": "進階粉雪／樹林課",
+    "level": "進階",
+    "duration": "全日 6 小時",
+    "price": 12000,
+    "currency": "TWD",
+    "description": "已能穩定滑紅線者，帶你進入二世谷的粉雪與樹林區域。",
+    "includes": ["1 對 2 小班", "路線規劃", "安全裝備說明"]
+  },
+  {
+    "name": "親子家庭課",
+    "level": "全齡",
+    "duration": "2 小時",
+    "price": 8000,
+    "currency": "TWD",
+    "description": "適合 5 歲以上小朋友與家長一起上課，遊戲式教學。",
+    "includes": ["兒童教具", "家長同行", "雪場拍照"]
+  }
+]
