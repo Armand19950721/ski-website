@@ -1,5 +1,22 @@
 {
   "name": "Ski & Snowboard Class",
+  "nameZh": "滑雪學校 / 戶外體驗",
+  "shortName": "SSC",
   "tagline": "北海道二世谷｜中文滑雪教學",
-  "footer": "© 2026 Ski & Snowboard Class. All rights reserved."
+  "logo": "/images/logo.svg",
+  "nav": [
+    { "text": "行程預定", "link": "#booking" },
+    { "text": "滑雪教練", "link": "#team" },
+    { "text": "團隊願景", "link": "#about" },
+    { "text": "行程介紹", "link": "#courses" },
+    { "text": "合作夥伴", "link": "#partners" }
+  ],
+  "company": {
+    "name": "Ski & Snowboard Class 合同会社",
+    "address": "〒044-0080 北海道虻田郡倶知安町（地址待補）",
+    "representative": "代表社員：（待補）",
+    "license": "旅行業登錄：（待補）",
+    "taxId": "統一編號：（待補）"
+  },
+  "footer": "Copyright © Ski & Snowboard Class. All rights reserved."
 }

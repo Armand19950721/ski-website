@@ -1,8 +1,11 @@
-把圖片放在這個資料夾，網站用 /images/檔名 引用。
+# Images
 
-目前 content 裡引用的圖片：
-- hero.jpg（首頁大圖）
-- instructor-ken.jpg
-- instructor-mia.jpg
+Put real photos here and reference them as `/images/<path>` in the JSON files under `/content`.
 
-沒有圖片時會顯示純色底，網站仍可正常運作。
+Current files are SVG placeholders. Replace them with real photos (jpg/webp) and update the paths in:
+
+- `content/hero.json` — collage photos (recommend 12 photos, landscape 3:2)
+- `content/team.json` — coach portraits (square, 800x800)
+- `content/about.json` — mountain + side photos
+- `content/partners.json` — partner logos (white on transparent, PNG/SVG)
+- `content/site.json` — logo

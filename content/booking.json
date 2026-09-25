@@ -1,0 +1,19 @@
+{
+  "title": "預約諮詢",
+  "steps": ["選擇行程", "填寫資料", "送出完成"],
+  "googleFormId": "",
+  "entries": {
+    "date": "entry.1000000001",
+    "course": "entry.1000000002",
+    "location": "entry.1000000003",
+    "pax": "entry.1000000004",
+    "name": "entry.1000000005",
+    "contact": "entry.1000000006",
+    "note": "entry.1000000007"
+  },
+  "locations": ["二世谷 Niseko", "留壽都 Rusutsu", "喜樂樂 Kiroro"],
+  "paxOptions": ["1 人", "2 人", "3 人", "4 人", "5 人"],
+  "lineLink": "https://lin.ee/xxxxxxx",
+  "successTitle": "預約資料已送出",
+  "successText": "我們將於 1 個工作天內透過您留下的聯絡方式與您確認行程與費用。"
+}

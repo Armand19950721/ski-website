@@ -1,0 +1,14 @@
+{
+  "title": "TEAM",
+  "subtitle": "冬季中文滑雪教練團隊",
+  "members": [
+    { "name": "Dante", "title": "執行長", "langs": ["中文", "英文", "日文"], "certs": ["NZSIA 2", "SBINZ 2", "AST 1"], "bio": "來自台灣南部，單、雙板兼修，教學風格簡單易懂、幽默風趣。座標二世谷全山，夏天是業餘農夫與旅行者。", "image": "/images/team/01.svg" },
+    { "name": "Kevin", "title": "營運總監", "langs": ["中文", "英文"], "certs": ["CASI 2", "NZSIA 2", "CASI PARK 1"], "bio": "土生土長台灣人，熱愛戶外活動。教學輕鬆簡單、注重安全。讓專業教練帶您在二世谷粉雪中翱翔。", "image": "/images/team/02.svg" },
+    { "name": "Ott", "title": "滑雪學校校長", "langs": ["英文"], "certs": ["CASI 3", "CASI PARK 1", "AST 2"], "bio": "CASI Level 3 指導員兼考官，12 個雪季經驗。專長大山自由滑行與長期系統訓練。", "image": "/images/team/03.svg" },
+    { "name": "Han", "title": "滑雪學校經理", "langs": ["中文", "英文", "日文"], "certs": ["CASI 2", "CSIA 1", "SBINZ 2"], "bio": "滑雪 7 年，走過澳洲、長野、北海道各大雪場。用輕鬆有趣的方式分享滑雪的樂趣。", "image": "/images/team/04.svg" },
+    { "name": "Hiko", "title": "資深滑雪教練", "langs": ["中文", "英文"], "certs": ["CASI 2", "CSIA 1"], "bio": "單板×雙板教練，重視每位學員的個性與步調，陪你在挑戰中發現樂趣。", "image": "/images/team/05.svg" },
+    { "name": "Nana", "title": "資深滑雪教練", "langs": ["中文"], "certs": ["CASI 2", "CSIA 1"], "bio": "從事各式板類教學，陪伴你練習取得平衡與節奏，緩緩地帶領你滑過冬季。", "image": "/images/team/06.svg" },
+    { "name": "Luke", "title": "滑雪教練", "langs": ["中文"], "certs": ["CASI 1", "CSIA 1"], "bio": "自從滑出人生第一個 S-turn 就停不下來。耐心、輕鬆又有趣的教學方式。", "image": "/images/team/07.svg" },
+    { "name": "Jewel", "title": "滑雪教練", "langs": ["中文"], "certs": ["CASI 1"], "bio": "理工背景，教學特別有邏輯，擅長將動作條理拆解，讓學生按部就班掌握技巧。", "image": "/images/team/08.svg" }
+  ]
+}

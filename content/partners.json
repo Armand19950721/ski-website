@@ -1,0 +1,16 @@
+{
+  "title": "PARTNERS",
+  "subtitle": "合作夥伴",
+  "lead": "點此使用各種代訂服務",
+  "background": "/images/partners/bg.svg",
+  "items": [
+    { "name": "Travel Agency", "logo": "/images/partners/01.svg", "link": "#" },
+    { "name": "Image Studio", "logo": "/images/partners/02.svg", "link": "#" },
+    { "name": "Niseko", "logo": "/images/partners/03.svg", "link": "#" },
+    { "name": "Rental Shop", "logo": "/images/partners/04.svg", "link": "#" },
+    { "name": "Hotel A", "logo": "/images/partners/05.svg", "link": "#" },
+    { "name": "Hotel B", "logo": "/images/partners/06.svg", "link": "#" },
+    { "name": "Rusutsu", "logo": "/images/partners/07.svg", "link": "#" },
+    { "name": "Kiroro", "logo": "/images/partners/08.svg", "link": "#" }
+  ]
+}

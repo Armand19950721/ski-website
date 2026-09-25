@@ -1,0 +1,10 @@
+{
+  "title": "上課流程",
+  "steps": [
+    { "title": "飯店前往集合地點", "icon": "/images/steps/01.svg" },
+    { "title": "行程裝備著裝完成", "icon": "/images/steps/02.svg" },
+    { "title": "會面教練工作人員", "icon": "/images/steps/03.svg" },
+    { "title": "一日行程體驗開始", "icon": "/images/steps/04.svg" },
+    { "title": "相約未來再次相會", "icon": "/images/steps/05.svg" }
+  ]
+}

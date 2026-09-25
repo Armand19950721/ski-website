@@ -1,7 +1,9 @@
 {
-  "title": "從第一次踩上雪板，到自在滑下粉雪",
-  "subtitle": "小班制、中文教練、二世谷粉雪。適合初學者與親子家庭的滑雪／單板課程。",
-  "primaryButton": { "text": "查看課程", "link": "#courses" },
-  "secondaryButton": { "text": "LINE 諮詢", "link": "#contact" },
-  "image": "/images/hero.jpg"
+  "images": [
+    "/images/hero/01.svg", "/images/hero/02.svg", "/images/hero/03.svg", "/images/hero/04.svg",
+    "/images/hero/05.svg", "/images/hero/06.svg", "/images/hero/07.svg", "/images/hero/08.svg",
+    "/images/hero/09.svg", "/images/hero/10.svg", "/images/hero/11.svg", "/images/hero/12.svg"
+  ],
+  "badge": "/images/hero/badge.svg",
+  "caption": "NISEKO · RUSUTSU · KIRORO"
 }

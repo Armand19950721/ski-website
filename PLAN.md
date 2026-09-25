@@ -63,3 +63,11 @@ AGENTS.md 重點：一般內容更新（價格、課程、教練、公告、FAQ�
 - Replit Agent 改完後能否自動 push 回 GitHub。
 - 免費方案 Publish 的實際存活時間。
 - 要不要 backorder skisnowboardclass.com。
+
+
+## UI 改版（2026-09-25）
+
+- 版面仿照客戶提供的參考網站（深藍＋金色、單頁、教練圓形卡片、行程手風琴、合作夥伴 logo 牆）。
+- 只複製版面與結構，圖片、文案、logo 全部是佔位，客戶需自行提供素材。
+- 預約流程改為三步驟「選擇行程 → 填寫資料 → 送出完成」，送出後 POST 到 Google 表單（設定在 `content/booking.json`），不做購物車與線上付款。
+- 內容檔案：見 `AGENTS.md` 的表格。
