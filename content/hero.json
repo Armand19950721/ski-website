@@ -1,9 +1,18 @@
 {
   "images": [
-    "/images/hero/01.svg", "/images/hero/02.svg", "/images/hero/03.svg", "/images/hero/04.svg",
-    "/images/hero/05.svg", "/images/hero/06.svg", "/images/hero/07.svg", "/images/hero/08.svg",
-    "/images/hero/09.svg", "/images/hero/10.svg", "/images/hero/11.svg", "/images/hero/12.svg"
+    "/images/hero/01.svg",
+    "/images/hero/02.svg",
+    "/images/hero/03.svg",
+    "/images/hero/04.svg",
+    "/images/hero/05.svg",
+    "/images/hero/06.svg",
+    "/images/hero/07.svg",
+    "/images/hero/08.svg",
+    "/images/hero/09.svg",
+    "/images/hero/10.svg",
+    "/images/hero/11.svg",
+    "/images/hero/12.svg"
   ],
   "badge": "/images/hero/badge.svg",
-  "caption": "NISEKO · RUSUTSU · KIRORO"
+  "caption": "ECHIGO-YUZAWA · NIIGATA · JAPAN"
 }

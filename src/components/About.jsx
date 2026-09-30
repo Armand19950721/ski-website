@@ -9,6 +9,12 @@ export default function About({ data }) {
         <p className="about-lead">{data.lead}</p>
         <div className="about-text">
           {data.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+          {data.services && (
+            <div className="about-services">
+              <strong>{data.services.title}</strong>
+              <ul>{data.services.items.map((s, i) => <li key={i}>{s}</li>)}</ul>
+            </div>
+          )}
         </div>
         <div className="features">
           {data.features.map((f) => (

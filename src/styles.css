@@ -106,21 +106,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .hero-dots { position: absolute; left: 50%; bottom: 20%; transform: translateX(-50%); display: flex; gap: 10px; }
 .hero-dots button { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.4); padding: 0; }
 .hero-dots button.on { background: #fff; }
-.ticker {
-  position: relative; z-index: 2;
-  max-width: 1040px; margin: -60px auto 14px;
-  display: flex; align-items: center; gap: 14px;
-  padding: 8px 20px; font-size: 13px; color: var(--cream);
-  background: rgba(0,0,0,.45); border: 1px solid rgba(197,157,95,.25);
-  text-align: left; white-space: nowrap; overflow: hidden;
-}
-.ticker-label { color: var(--gold); border: 1px solid var(--gold); padding: 0 8px; font-size: 12px; flex: none; }
-.ticker-track { overflow: hidden; text-overflow: ellipsis; }
-.ticker-track span + span { margin-left: 40px; }
 
 /* booking */
 .booking { position: relative; z-index: 2; padding: 0 20px; margin-top: -150px; }
-.booking .ticker { margin: 0 auto 14px; }
 .booking-card {
   max-width: 1040px; margin: 0 auto;
   padding: 28px 36px 32px;
@@ -146,9 +134,13 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .bk-grid input:focus, .bk-grid select:focus, .bk-grid textarea:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,.12); }
 .bk-grid textarea { grid-column: 1 / -1; resize: vertical; }
 .bk-field { position: relative; display: block; }
-.bk-field input { padding-left: 16px; }
-.bk-field input.empty { color: transparent; }
-.bk-ph { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #fff; }
+.bk-field input { display: block; min-height: 50px; padding-left: 16px; text-align: left; line-height: 1.4; }
+.bk-field input::-webkit-date-and-time-value { text-align: left; min-height: 1.4em; margin: 0; }
+.bk-field input::-webkit-datetime-edit { padding: 0; }
+.bk-field.empty input { color: transparent; }
+.bk-field.empty input::-webkit-datetime-edit, .bk-field.empty input::-webkit-date-and-time-value { color: transparent; }
+.bk-ph { display: none; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #fff; letter-spacing: 1px; }
+.bk-field.empty .bk-ph { display: block; }
 .bk-field input::-webkit-calendar-picker-indicator { filter: invert(.75) sepia(.6) saturate(3) hue-rotate(-10deg); }
 .bk-link { display: block; text-align: right; margin: 12px 0 18px; font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .bk-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 18px; border-top: 1px solid var(--line); flex-wrap: wrap; }
@@ -208,7 +200,12 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .about h2 { font-size: 40px; letter-spacing: 6px; margin-bottom: 18px; }
 .about-lead { font-size: 17px; margin: 0 0 24px; }
 .about-text { max-width: 560px; font-size: 14px; color: var(--grey); line-height: 2; }
-.about-text p { margin: 0; }
+.about-text p { margin: 0 0 12px; }
+.about-services { margin-top: 20px; }
+.about-services strong { display: block; color: var(--cream); font-weight: 500; margin-bottom: 6px; }
+.about-services ul { list-style: none; padding: 0; margin: 0; }
+.about-services li { padding-left: 18px; position: relative; }
+.about-services li::before { content: ''; position: absolute; left: 0; top: .95em; width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
 .features { display: flex; gap: 18px; margin-top: 56px; flex-wrap: wrap; }
 .feature {
   width: 132px; height: 132px; border: 1px solid var(--gold);
@@ -251,12 +248,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .step-num { color: var(--gold); font-size: 22px; letter-spacing: 3px; }
 .step-text { font-size: 14px; color: var(--grey); letter-spacing: 2px; }
 
-/* partners */
-.partners { position: relative; padding: 140px 20px 120px; background: #2b4457; overflow: hidden; }
-.partners-bg { position: absolute; inset: 0; background-size: cover; background-position: bottom; opacity: .7; }
-.partners::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 160px; background: linear-gradient(180deg, var(--navy), transparent); }
-.partners-inner { position: relative; max-width: 1000px; margin: 0 auto; }
-.partners-lead { margin: -40px 0 50px; letter-spacing: 3px; }
 .logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 24px; }
 .logo { display: block; padding: 10px; filter: grayscale(1) brightness(1.4); opacity: .85; transition: .3s; position: relative; }
 .logo::after { content: ''; position: absolute; left: 50%; bottom: -8px; width: 36px; height: 1px; background: rgba(255,255,255,.35); transform: translateX(-50%); }
@@ -266,13 +257,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 
 /* footer */
 .footer { background: #0e1a24; padding: 60px 20px 30px; font-size: 13px; color: var(--grey); }
-.footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; margin-bottom: 40px; color: #fff; }
-.footer-nav a { padding: 0 20px; border-right: 1px solid var(--gold); line-height: 1.2; }
-.footer-nav a:last-child { border-right: 0; }
 .footer-ctas { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 40px; }
 .footer-link { color: #fff; letter-spacing: 2px; }
-.footer-company { display: grid; gap: 4px; margin-bottom: 40px; }
-.footer-company a { color: #fff; font-size: 15px; }
+.footer-company { color: #fff; font-size: 15px; letter-spacing: 2px; margin-bottom: 24px; }
 .footer-copy { color: var(--grey-2); font-size: 12px; letter-spacing: 2px; }
 
 /* responsive */
@@ -315,8 +302,5 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .feature { width: calc(50% - 6px); height: 110px; }
   .process-steps li:not(:last-child)::after { display: none; }
   .process-steps li { width: 140px; }
-  .partners { padding: 100px 16px 80px; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 16px; }
-  .footer-nav a { padding: 6px 14px; }
-  .footer-nav a:nth-child(3) { border-right: 0; }
-}
+    }

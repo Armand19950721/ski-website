@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const empty = { date: '', course: '', location: '', pax: '', name: '', contact: '', note: '' }
 
-export default function Booking({ data, courses, announcements = [] }) {
+export default function Booking({ data, courses }) {
   const [step, setStep] = useState(0)
   const [form, setForm] = useState(empty)
   const [sending, setSending] = useState(false)
@@ -10,6 +10,11 @@ export default function Booking({ data, courses, announcements = [] }) {
   const selected = courses.find((c) => c.name === form.course)
   const step1ok = form.date && form.course && form.location && form.pax
   const step2ok = form.name && form.contact
+  const today = new Date().toISOString().slice(0, 10)
+  const price = selected && selected.pricing[0]
+  const summary = price
+    ? `${selected.name}｜${price.label} ${price.tiers[0][1]}${/\d/.test(price.tiers[0][1]) ? ' 起' : ''}`
+    : '行程說明概要'
 
   async function submit(e) {
     e.preventDefault()
@@ -30,14 +35,6 @@ export default function Booking({ data, courses, announcements = [] }) {
 
   return (
     <section id="booking" className="booking" data-reveal>
-      {announcements.length > 0 && (
-        <div className="ticker">
-          <span className="ticker-label">公告</span>
-          <div className="ticker-track">
-            {announcements.map((a, i) => <span key={i}>{a.date}｜{a.text}</span>)}
-          </div>
-        </div>
-      )}
       <div className="booking-card">
         <ol className="steps">
           {data.steps.map((s, i) => (
@@ -50,9 +47,9 @@ export default function Booking({ data, courses, announcements = [] }) {
         {step === 0 && (
           <form className="bk-form" onSubmit={(e) => { e.preventDefault(); if (step1ok) setStep(1) }}>
             <div className="bk-grid">
-              <label className="bk-field">
-                <input type="date" className={form.date ? '' : 'empty'} value={form.date} onChange={set('date')} required />
-                <span className="bk-ph">{form.date ? '' : '請選擇行程時間'}</span>
+              <label className={`bk-field ${form.date ? '' : 'empty'}`}>
+                <input type="date" min={today} value={form.date} onChange={set('date')} required aria-label="行程時間" />
+                <span className="bk-ph" aria-hidden="true">請選擇行程時間</span>
               </label>
               <select value={form.course} onChange={set('course')} required>
                 <option value="">請選擇行程</option>
@@ -70,7 +67,7 @@ export default function Booking({ data, courses, announcements = [] }) {
             <a href="#courses" className="bk-link">全部行程介紹</a>
             <div className="bk-actions">
               <span className="bk-summary">
-                {selected ? `${selected.name}｜${selected.pricing[0].label} ${selected.pricing[0].tiers[0][1]} 起` : '行程說明概要'}
+                {summary}
               </span>
               <button className="btn-gold" disabled={!step1ok}>填寫聯絡資料 →</button>
             </div>
