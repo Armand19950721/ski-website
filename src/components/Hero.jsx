@@ -1,6 +1,18 @@
 import { useEffect, useState } from 'react'
 
-function Frame({ id }) {
+function Frame({ data }) {
+  if (data.video) {
+    return (
+      <video
+        src={data.video}
+        poster={data.videoPoster}
+        autoPlay muted loop playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+    )
+  }
+  const id = data.youtubeId
   const q = new URLSearchParams({
     autoplay: 1, mute: 1, loop: 1, playlist: id, controls: 0, playsinline: 1,
     rel: 0, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0,
@@ -47,22 +59,22 @@ function Collage({ images, page }) {
 }
 
 export default function Hero({ data }) {
-  const id = data.youtubeId
+  const hasVideo = !!(data.video || data.youtubeId)
   const portrait = data.videoPortrait !== false
 
-  if (id) {
+  if (hasVideo) {
     return (
       <section id="top" className={`hero has-video ${portrait ? 'hero-portrait' : 'hero-landscape'}`}>
         <div className="hero-bg" />
         {!portrait && (
-          <div className="hero-video"><Frame id={id} /><div className="hero-fade" /></div>
+          <div className="hero-video"><Frame data={data} /><div className="hero-fade" /></div>
         )}
         <div className="hero-wrap">
           <Copy data={data} />
           {portrait && (
             <div className="hero-frame-wrap">
               <div className="hero-frame-glow" />
-              <div className="hero-frame"><Frame id={id} /><div className="hero-frame-fade" /></div>
+              <div className="hero-frame" style={data.videoAspect ? { aspectRatio: data.videoAspect } : undefined}><Frame data={data} /><div className="hero-frame-fade" /></div>
             </div>
           )}
         </div>

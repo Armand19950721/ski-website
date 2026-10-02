@@ -1,4 +1,7 @@
 {
+  "video": "/videos/hero.mp4",
+  "videoPoster": "/videos/hero-poster.jpg",
+  "videoAspect": "3 / 4",
   "youtubeId": "KK4lA9i5xdw",
   "videoPortrait": true,
   "heading": "Ski & Snowboard Class",

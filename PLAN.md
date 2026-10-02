@@ -95,3 +95,4 @@ AGENTS.md 重點：一般內容更新（價格、課程、教練、公告、FAQ�
 - 行程介紹區塊：移除四個課程手風琴（課程名稱仍保留在 `courses.json` 供預約下拉用）。改為兩個群組：「課程介紹」（課程介紹、課程時間）與「詳細內容」（其餘指南）。內容搬到 `guides.json` 的 `groups[]`。最大人數改 6 人。
 - 頁首改為 YouTube 背景影片（`hero.json` 的 `youtubeId`），客戶尚未提供影片連結，空值時仍顯示照片拼貼。
 - 2026-10-02 補：客戶提供 YouTube Shorts（直式）`KK4lA9i5xdw`。桌面版改為左文案＋右手機框影片，手機版直式滿版；`hero.json` 的 `videoPortrait` 控制（16:9 影片設 false 會整片鋪滿）。
+- 2026-10-02 補 2：YouTube 嵌入會跳出播放器 UI 無法關閉，改為自架 mp4（`public/videos/hero.mp4`，從客戶 Shorts 轉檔、裁掉上下黑邊、去音軌，1.7 MB），`hero.json` 的 `video` 優先於 `youtubeId`。桌面影片框改置中於右欄。

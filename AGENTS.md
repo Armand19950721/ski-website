@@ -31,7 +31,11 @@ Rules for editing JSON:
 
 ## Hero video
 
-`content/hero.json` → `youtubeId`: the 11-character ID from a YouTube URL
+Preferred: a self-hosted mp4. Put the file in `public/videos/` (H.264, no audio, under ~5 MB, portrait is fine) and set
+`content/hero.json` → `video` (e.g. `/videos/hero.mp4`), `videoPoster` (a jpg frame) and `videoAspect`
+(e.g. `"3 / 4"` or `"9 / 16"`, the shape of the desktop frame). This plays with no YouTube UI.
+
+Fallback: `youtubeId`: the 11-character ID from a YouTube URL
 (`https://www.youtube.com/watch?v=<ID>` or `https://youtu.be/<ID>`). The video must be public or unlisted and allow embedding.
 It plays muted, looped, without controls. `videoPortrait: true` (直式 Shorts) shows it in a phone-style frame on desktop and full-screen on mobile; `false` (16:9) covers the whole hero. Leave `youtubeId` empty to fall back to the photo collage.
 
