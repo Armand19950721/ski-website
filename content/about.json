@@ -19,11 +19,26 @@
     ]
   },
   "features": [
-    { "title": "台灣團隊", "text": "資深台灣教練\n＋國際教練" },
-    { "title": "中英教學", "text": "中文、英文\n專業滑雪課程" },
-    { "title": "越後湯澤", "text": "主要服務區域\n其他雪場可洽詢" },
-    { "title": "夏季培訓", "text": "室內滑雪場教學\n教練培訓考證" }
+    {
+      "title": "專業團隊",
+      "text": "資深台灣教練\n＋國際教練"
+    },
+    {
+      "title": "中英教學",
+      "text": "中文、英文\n專業滑雪課程"
+    },
+    {
+      "title": "服務區域",
+      "text": "深耕越後湯澤\n其他雪場可洽詢"
+    },
+    {
+      "title": "全年服務",
+      "text": "冬季日本室外雪場\n夏季中國室內雪場"
+    }
   ],
   "mountainImage": "/images/about/mountain.svg",
-  "sideImages": ["/images/about/side-1.svg", "/images/about/side-2.svg"]
+  "sideImages": [
+    "/images/about/side-1.svg",
+    "/images/about/side-2.svg"
+  ]
 }

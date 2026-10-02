@@ -13,12 +13,12 @@ Do not touch `/src`.
 | File | What it controls |
 | --- | --- |
 | `content/site.json` | site name, logo, nav links, company name (footer), copyright |
-| `content/hero.json` | hero collage photos, badge, caption |
-| `content/booking.json` | booking widget: steps, Google Form ID + entry IDs, locations, pax options, LINE link, success text |
+| `content/hero.json` | `youtubeId` (hero background video; when empty the photo collage `images[]` is shown), badge, caption |
+| `content/booking.json` | booking widget: steps, Google Form ID + entry IDs, locations, pax options, 課程介紹 link text, LINE link, success text |
 | `content/team.json` | coaches: name, title, langs[], certs[], bio, image |
 | `content/about.json` | 關於我們 text (`paragraphs[]`), `services` list (教學與服務內容), feature boxes, images |
-| `content/courses.json` | 行程類型: each course has `pricing[]` (label + tiers [[人數, 價格]]) and `details[]` (label + lines[]) |
-| `content/guides.json` | 詳細內容 accordions (guides, FAQ, contact info) |
+| `content/courses.json` | ONLY the course names in the booking dropdown (`items[].name`); not shown elsewhere |
+| `content/guides.json` | 行程介紹 section: `groups[]` (課程介紹 / 詳細內容), each with accordion `items[]` of `sections[]` (label + lines[]) |
 | `content/process.json` | 上課流程 5 steps |
 | `content/contact.json` | LINE link (header + footer 線上客服), email, phone |
 
@@ -28,6 +28,12 @@ Rules for editing JSON:
 - Prices are plain strings, e.g. `"￥74,800"`, so write them exactly as they should display.
 - Emoji prefixes (✅ 🔸 ⚠️ ❌) in lines are just text, keep or remove freely.
 - Images go in `/public/images/...` and are referenced as `/images/<path>`.
+
+## Hero video
+
+`content/hero.json` → `youtubeId`: the 11-character ID from a YouTube URL
+(`https://www.youtube.com/watch?v=<ID>` or `https://youtu.be/<ID>`). The video must be public or unlisted and allow embedding.
+It plays muted, looped, without controls as a background. Leave empty to fall back to the photo collage.
 
 ## Booking widget → Google Form
 

@@ -28,7 +28,7 @@ export default function App() {
         <Booking data={booking} courses={courses.items} />
         <Team data={team} />
         <About data={about} />
-        <Introduction courses={courses} guides={guides} />
+        <Introduction data={guides} />
         <Process data={process} />
       </main>
       <Footer site={site} contact={contact} />

@@ -7,14 +7,9 @@ export default function Booking({ data, courses }) {
   const [form, setForm] = useState(empty)
   const [sending, setSending] = useState(false)
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value })
-  const selected = courses.find((c) => c.name === form.course)
   const step1ok = form.date && form.course && form.location && form.pax
   const step2ok = form.name && form.contact
   const today = new Date().toISOString().slice(0, 10)
-  const price = selected && selected.pricing[0]
-  const summary = price
-    ? `${selected.name}｜${price.label} ${price.tiers[0][1]}${/\d/.test(price.tiers[0][1]) ? ' 起' : ''}`
-    : '行程說明概要'
 
   async function submit(e) {
     e.preventDefault()
@@ -64,11 +59,8 @@ export default function Booking({ data, courses }) {
                 {data.paxOptions.map((p) => <option key={p}>{p}</option>)}
               </select>
             </div>
-            <a href="#courses" className="bk-link">全部行程介紹</a>
-            <div className="bk-actions">
-              <span className="bk-summary">
-                {summary}
-              </span>
+            <a href="#courses" className="bk-link">{data.coursesLinkText || '課程介紹'}</a>
+            <div className="bk-actions bk-actions-end">
               <button className="btn-gold" disabled={!step1ok}>填寫聯絡資料 →</button>
             </div>
           </form>

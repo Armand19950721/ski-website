@@ -82,7 +82,14 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .burger.open span:nth-child(3) { top: 12px; transform: rotate(-45deg); }
 
 /* hero collage */
-.hero { position: relative; height: min(92vh, 860px); min-height: 620px; overflow: hidden; background: var(--navy-3); }
+.hero { position: relative; height: min(92vh, 860px); min-height: 620px; overflow: hidden; background: var(--navy-3); container-type: size; }
+.hero-video { position: absolute; inset: 0; overflow: hidden; background: var(--navy-3); }
+.hero-video iframe {
+  position: absolute; top: 50%; left: 50%; border: 0; pointer-events: none;
+  width: max(100cqw, calc(100cqh * 16 / 9)); height: max(100cqh, calc(100cqw * 9 / 16));
+  transform: translate(-50%, -50%);
+}
+.hero.has-video .hero-fade { background: linear-gradient(180deg, rgba(9,34,52,.35) 0%, rgba(9,34,52,.1) 50%, var(--navy) 100%); }
 .hero-collage {
   position: absolute; inset: -15% -25%;
   display: grid;
@@ -144,7 +151,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .bk-field input::-webkit-calendar-picker-indicator { filter: invert(.75) sepia(.6) saturate(3) hue-rotate(-10deg); }
 .bk-link { display: block; text-align: right; margin: 12px 0 18px; font-size: 13px; color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .bk-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 18px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-.bk-summary { font-size: 13px; color: var(--grey); text-decoration: underline; text-underline-offset: 4px; }
+.bk-actions-end { justify-content: flex-end; }
 .bk-review { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 6px; font-size: 14px; }
 .bk-review b { display: block; font-size: 12px; color: var(--gold); font-weight: 400; }
 .bk-done { text-align: center; padding: 20px 0 6px; }
@@ -219,6 +226,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .intro { padding-top: 40px; }
 .intro-inner { max-width: 900px; margin: 0 auto; text-align: left; }
 .group-label { color: var(--gold); letter-spacing: 3px; margin: 40px 0 10px; font-size: 15px; }
+.intro-inner > div:first-child .group-label { margin-top: 0; }
 .acc li { border-bottom: 1px solid var(--line); }
 .acc-head { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 4px; font-size: 16px; text-align: left; transition: color .3s; }
 .acc-head:hover, .acc li.open .acc-head { color: var(--gold); }
