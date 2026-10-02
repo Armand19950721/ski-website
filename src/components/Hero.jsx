@@ -1,20 +1,36 @@
 import { useEffect, useState } from 'react'
 
-function Video({ id }) {
+function Frame({ id }) {
   const q = new URLSearchParams({
     autoplay: 1, mute: 1, loop: 1, playlist: id, controls: 0, playsinline: 1,
-    rel: 0, modestbranding: 1, iv_load_policy: 3, disablekb: 1,
+    rel: 0, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0,
   })
   return (
-    <div className="hero-video">
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${id}?${q}`}
-        title="Ski & Snowboard Class"
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowFullScreen={false}
-        tabIndex={-1}
-      />
-      <div className="hero-fade" />
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${id}?${q}`}
+      title="Ski & Snowboard Class"
+      allow="autoplay; encrypted-media"
+      tabIndex={-1}
+    />
+  )
+}
+
+function Copy({ data }) {
+  return (
+    <div className="hero-copy">
+      {data.caption && <div className="hero-eyebrow">{data.caption}</div>}
+      <h1>
+        {data.heading}
+        {data.subheading && <small>{data.subheading}</small>}
+      </h1>
+      {data.text && <p>{data.text}</p>}
+      {data.cta?.length > 0 && (
+        <div className="hero-ctas">
+          {data.cta.map((c, i) => (
+            <a key={c.link} href={c.link} className={i === 0 ? 'btn-gold' : 'btn-outline'}>{c.text}</a>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -31,27 +47,46 @@ function Collage({ images, page }) {
 }
 
 export default function Hero({ data }) {
+  const id = data.youtubeId
+  const portrait = data.videoPortrait !== false
+
+  if (id) {
+    return (
+      <section id="top" className={`hero has-video ${portrait ? 'hero-portrait' : 'hero-landscape'}`}>
+        <div className="hero-bg" />
+        {!portrait && (
+          <div className="hero-video"><Frame id={id} /><div className="hero-fade" /></div>
+        )}
+        <div className="hero-wrap">
+          <Copy data={data} />
+          {portrait && (
+            <div className="hero-frame-wrap">
+              <div className="hero-frame-glow" />
+              <div className="hero-frame"><Frame id={id} /><div className="hero-frame-fade" /></div>
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
   const pages = 3
-  const video = !!data.youtubeId
   const [page, setPage] = useState(0)
   useEffect(() => {
-    if (video) return
     const t = setInterval(() => setPage((p) => (p + 1) % pages), 5000)
     return () => clearInterval(t)
-  }, [video])
+  }, [])
 
   return (
-    <section id="top" className={`hero ${video ? 'has-video' : ''}`}>
-      {video ? <Video id={data.youtubeId} /> : <Collage images={data.images} page={page} />}
+    <section id="top" className="hero">
+      <Collage images={data.images} page={page} />
       {data.badge && <img src={data.badge} alt="" className="hero-badge" />}
       {data.caption && <div className="hero-caption">{data.caption}</div>}
-      {!video && (
-        <div className="hero-dots">
-          {Array.from({ length: pages }).map((_, i) => (
-            <button key={i} className={i === page ? 'on' : ''} onClick={() => setPage(i)} aria-label={`第 ${i + 1} 頁`} />
-          ))}
-        </div>
-      )}
+      <div className="hero-dots">
+        {Array.from({ length: pages }).map((_, i) => (
+          <button key={i} className={i === page ? 'on' : ''} onClick={() => setPage(i)} aria-label={`第 ${i + 1} 頁`} />
+        ))}
+      </div>
     </section>
   )
 }

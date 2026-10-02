@@ -19,3 +19,4 @@ AM 9:00 - PM 12:00 / PM 1:00 - PM 4:00
 課程時數 3 小時
 
 將youtube影片取代頁首的照片slide 
+https://youtube.com/shorts/KK4lA9i5xdw?is=rQz8TJvEOCYt3OxZ

@@ -1,5 +1,21 @@
 {
-  "youtubeId": "",
+  "youtubeId": "KK4lA9i5xdw",
+  "videoPortrait": true,
+  "heading": "Ski & Snowboard Class",
+  "subheading": "越後湯澤｜中文・英文滑雪課程",
+  "text": "來自台灣的 SSC 滑雪團隊。雙板／單板、全日／半日私人課程，從裝備使用、安全跌倒到自主上下纜車，課後附影片分析。",
+  "cta": [
+    {
+      "text": "立即預約",
+      "link": "#booking"
+    },
+    {
+      "text": "課程介紹",
+      "link": "#courses"
+    }
+  ],
+  "caption": "ECHIGO-YUZAWA · NIIGATA · JAPAN",
+  "badge": "/images/hero/badge.svg",
   "images": [
     "/images/hero/01.svg",
     "/images/hero/02.svg",
@@ -13,7 +29,5 @@
     "/images/hero/10.svg",
     "/images/hero/11.svg",
     "/images/hero/12.svg"
-  ],
-  "badge": "/images/hero/badge.svg",
-  "caption": "ECHIGO-YUZAWA · NIIGATA · JAPAN"
+  ]
 }

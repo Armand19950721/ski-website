@@ -13,7 +13,7 @@ Do not touch `/src`.
 | File | What it controls |
 | --- | --- |
 | `content/site.json` | site name, logo, nav links, company name (footer), copyright |
-| `content/hero.json` | `youtubeId` (hero background video; when empty the photo collage `images[]` is shown), badge, caption |
+| `content/hero.json` | `youtubeId` + `videoPortrait` (true for Shorts/直式), `heading`, `subheading`, `text`, `cta[]`, `caption`; when `youtubeId` is empty the photo collage `images[]` + badge is shown |
 | `content/booking.json` | booking widget: steps, Google Form ID + entry IDs, locations, pax options, 課程介紹 link text, LINE link, success text |
 | `content/team.json` | coaches: name, title, langs[], certs[], bio, image |
 | `content/about.json` | 關於我們 text (`paragraphs[]`), `services` list (教學與服務內容), feature boxes, images |
@@ -33,7 +33,7 @@ Rules for editing JSON:
 
 `content/hero.json` → `youtubeId`: the 11-character ID from a YouTube URL
 (`https://www.youtube.com/watch?v=<ID>` or `https://youtu.be/<ID>`). The video must be public or unlisted and allow embedding.
-It plays muted, looped, without controls as a background. Leave empty to fall back to the photo collage.
+It plays muted, looped, without controls. `videoPortrait: true` (直式 Shorts) shows it in a phone-style frame on desktop and full-screen on mobile; `false` (16:9) covers the whole hero. Leave `youtubeId` empty to fall back to the photo collage.
 
 ## Booking widget → Google Form
 
