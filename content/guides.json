@@ -1,12 +1,12 @@
 {
   "title": "INTRODUCTION",
-  "subtitle": "行程介紹",
+  "subtitle": "課程介紹",
   "groups": [
     {
-      "label": "課程介紹",
+      "label": "課程內容",
       "items": [
         {
-          "title": "課程介紹",
+          "title": "課前須知",
           "sections": [
             {
               "label": "適用學員",
@@ -48,7 +48,7 @@
           ]
         },
         {
-          "title": "課程時間",
+          "title": "上課時間",
           "sections": [
             {
               "label": "全日",
@@ -66,14 +66,39 @@
               ]
             }
           ]
+        },
+        {
+          "title": "上課流程",
+          "steps": [
+            {
+              "title": "自行前往集合地點",
+              "icon": "/images/steps/01.svg"
+            },
+            {
+              "title": "課程裝備著裝完成",
+              "icon": "/images/steps/02.svg"
+            },
+            {
+              "title": "會面教練工作人員",
+              "icon": "/images/steps/03.svg"
+            },
+            {
+              "title": "課程體驗開始",
+              "icon": "/images/steps/04.svg"
+            },
+            {
+              "title": "相約未來再次相會",
+              "icon": "/images/steps/05.svg"
+            }
+          ]
         }
       ]
     },
     {
-      "label": "詳細內容",
+      "label": "常見問題",
       "items": [
         {
-          "title": "越後湯澤雪場指南",
+          "title": "越後湯澤雪場介紹",
           "sections": [
             {
               "label": "雪場資訊",
@@ -86,7 +111,7 @@
           ]
         },
         {
-          "title": "滑雪服裝及裝備指南",
+          "title": "滑雪服裝及裝備建議",
           "sections": [
             {
               "label": "服裝建議",
@@ -107,7 +132,7 @@
           ]
         },
         {
-          "title": "親子滑雪指南",
+          "title": "滑雪建議年齡",
           "sections": [
             {
               "label": "建議年齡",
@@ -125,7 +150,7 @@
           ]
         },
         {
-          "title": "常見問題",
+          "title": "其他問題",
           "sections": [
             {
               "label": "完全沒滑過可以報名嗎？",

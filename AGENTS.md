@@ -2,7 +2,7 @@
 
 This is a ski & snowboard school brochure site (Vite + React, static).
 Design reference: dark navy + gold, single page, sections in this order:
-Header → Hero collage → Booking widget → Team → About → Introduction (courses + guides) → Process → Footer.
+Header → Hero collage → Booking widget → Team → About → Introduction (courses + guides, incl. 上課流程) → Footer.
 
 ## Content updates (most requests)
 
@@ -18,8 +18,7 @@ Do not touch `/src`.
 | `content/team.json` | coaches: name, title, langs[], certs[], bio, image |
 | `content/about.json` | 關於我們 text (`paragraphs[]`), `services` list (教學與服務內容), feature boxes, images |
 | `content/courses.json` | ONLY the course names in the booking dropdown (`items[].name`); not shown elsewhere |
-| `content/guides.json` | 行程介紹 section: `groups[]` (課程介紹 / 詳細內容), each with accordion `items[]` of `sections[]` (label + lines[]) |
-| `content/process.json` | 上課流程 5 steps |
+| `content/guides.json` | 課程介紹 section: `groups[]` (課程內容 / 常見問題), each with accordion `items[]` of `sections[]` (label + lines[]). The 上課流程 item has `steps[]` (title + icon) instead of `sections[]` |
 | `content/contact.json` | LINE link (header + footer 線上客服), email, phone |
 
 Rules for editing JSON:

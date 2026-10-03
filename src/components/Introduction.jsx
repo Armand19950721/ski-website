@@ -27,14 +27,26 @@ export default function Introduction({ data }) {
             <ul className="acc">
               {g.items.map((item, i) => (
                 <Accordion key={item.title} title={item.title} open={open === `${gi}-${i}`} onToggle={toggle(`${gi}-${i}`)}>
-                  <div className="course-detail">
-                    {item.sections.map((s) => (
-                      <div key={s.label} className="detail-block">
-                        <div className="detail-label">{s.label}</div>
-                        {s.lines.map((l, j) => <p key={j}>{l}</p>)}
-                      </div>
-                    ))}
-                  </div>
+                  {item.steps ? (
+                    <ol className="process-steps">
+                      {item.steps.map((s, j) => (
+                        <li key={j}>
+                          <div className="step-icon"><img src={s.icon} alt="" /></div>
+                          <div className="step-num">{String(j + 1).padStart(2, '0')}</div>
+                          <div className="step-text">{s.title}</div>
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <div className="course-detail">
+                      {item.sections.map((s) => (
+                        <div key={s.label} className="detail-block">
+                          <div className="detail-label">{s.label}</div>
+                          {s.lines.map((l, j) => <p key={j}>{l}</p>)}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </Accordion>
               ))}
             </ul>

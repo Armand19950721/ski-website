@@ -43,11 +43,11 @@ export default function Booking({ data, courses }) {
           <form className="bk-form" onSubmit={(e) => { e.preventDefault(); if (step1ok) setStep(1) }}>
             <div className="bk-grid">
               <label className={`bk-field ${form.date ? '' : 'empty'}`}>
-                <input type="date" min={today} value={form.date} onChange={set('date')} required aria-label="行程時間" />
-                <span className="bk-ph" aria-hidden="true">請選擇行程時間</span>
+                <input type="date" min={today} value={form.date} onChange={set('date')} required aria-label="課程時間" />
+                <span className="bk-ph" aria-hidden="true">請選擇課程時間</span>
               </label>
               <select value={form.course} onChange={set('course')} required>
-                <option value="">請選擇行程</option>
+                <option value="">請選擇課程</option>
                 {courses.map((c) => <option key={c.name}>{c.name}</option>)}
               </select>
               <select value={form.location} onChange={set('location')} required>
@@ -74,7 +74,7 @@ export default function Booking({ data, courses }) {
               <textarea placeholder="備註：程度、單板或雙板、兒童年齡…" rows="3" value={form.note} onChange={set('note')} />
             </div>
             <ul className="bk-review">
-              <li><b>行程</b>{form.course}</li>
+              <li><b>課程</b>{form.course}</li>
               <li><b>日期</b>{form.date}</li>
               <li><b>地點</b>{form.location}</li>
               <li><b>人數</b>{form.pax}</li>

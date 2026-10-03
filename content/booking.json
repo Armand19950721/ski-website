@@ -1,7 +1,7 @@
 {
   "title": "預約諮詢",
   "steps": [
-    "選擇行程",
+    "選擇課程",
     "填寫資料",
     "送出完成"
   ],
@@ -29,6 +29,6 @@
   ],
   "lineLink": "https://lin.ee/xxxxxxx",
   "successTitle": "預約資料已送出",
-  "successText": "我們將於 1 個工作天內透過您留下的聯絡方式與您確認行程與費用。",
+  "successText": "我們將於 1 個工作天內透過您留下的聯絡方式與您確認課程與費用。",
   "coursesLinkText": "課程介紹"
 }

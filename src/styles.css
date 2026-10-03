@@ -258,11 +258,11 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .feature span { font-size: 11px; color: var(--grey); white-space: pre-line; line-height: 1.5; }
 
 /* introduction */
-.intro { padding-top: 40px; }
+.intro { padding-top: 40px; padding-bottom: 120px; }
 .intro-inner { max-width: 900px; margin: 0 auto; text-align: left; }
 .group-label { color: var(--gold); letter-spacing: 3px; margin: 40px 0 10px; font-size: 15px; }
 .intro-inner > div:first-child .group-label { margin-top: 0; }
-.acc li { border-bottom: 1px solid var(--line); }
+.acc > li { border-bottom: 1px solid var(--line); }
 .acc-head { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 4px; font-size: 16px; text-align: left; transition: color .3s; }
 .acc-head:hover, .acc li.open .acc-head { color: var(--gold); }
 .acc-icon { position: relative; width: 14px; height: 14px; flex: none; }
@@ -280,11 +280,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .tiers li { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255,255,255,.1); padding: 4px 0; }
 .tiers b { color: #fff; font-weight: 600; }
 
-/* process */
-.process { padding: 60px 20px 100px; }
-.process-title { font-size: 26px; letter-spacing: 5px; margin-bottom: 50px; }
-.process-steps { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
-.process-steps li { width: 170px; position: relative; }
+/* process (inside the 上課流程 accordion) */
+.process-steps { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 0 auto; padding-top: 16px; text-align: center; }
+.process-steps li { width: 140px; position: relative; }
 .process-steps li:not(:last-child)::after { content: ''; position: absolute; top: 40px; right: -22px; width: 14px; height: 1px; background: var(--gold); }
 .step-icon { width: 80px; height: 80px; margin: 0 auto 14px; border: 1px solid rgba(197,157,95,.6); border-radius: 50%; display: grid; place-items: center; }
 .step-icon img { width: 36px; height: 36px; }
@@ -357,6 +355,5 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   .features { gap: 12px; }
   .feature { width: calc(50% - 6px); height: 110px; }
   .process-steps li:not(:last-child)::after { display: none; }
-  .process-steps li { width: 140px; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 16px; }
     }
