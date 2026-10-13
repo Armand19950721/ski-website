@@ -54,3 +54,14 @@ explicitly asks for a design or layout change.
 
 Run `npm run build` and make sure it succeeds and the page renders
 correctly in preview before publishing.
+
+## Deploying on Replit
+
+The Replit workspace is only a mirror of GitHub `main`; never edit or commit there.
+To publish a new version:
+
+1. In the Replit Shell run `bash replit-sync.sh` (fetches `origin/main`, hard-resets the
+   workspace to it, runs `npm ci` so `package-lock.json` is never rewritten, then `npm run build`).
+2. Click **Republish** in the Deployments panel. Publishing cannot be triggered from the shell.
+
+Do not run `git pull` / `git merge` or `npm install` by hand on Replit; use the script.
